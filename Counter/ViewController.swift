@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var ResetCount: UIButton!
     @IBOutlet weak var TitleMinus: UIButton!
     @IBOutlet weak var ttitle: UIButton!
@@ -24,7 +24,7 @@ class ViewController: UIViewController {
         History.text = "История изменений"
         Update()
     }
-
+    
     @IBAction func Plus1(_ sender: Any) {
         count += 1
         Update()
@@ -37,7 +37,7 @@ class ViewController: UIViewController {
         } else {
             UpdToHistory(sms: "Попытка уменшить ниже 0")
         }
-      
+        
         Update()
     }
     
@@ -62,6 +62,6 @@ class ViewController: UIViewController {
         
         let bottom = NSRange(location: History.text.count, length: 1)
         History.scrollRangeToVisible(bottom)
-        }
+    }
 }
 
